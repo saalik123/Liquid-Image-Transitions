@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin-left: 5rem;
+    margin-right: 3rem;
+}
+
+.distortion {
+    width: 64rem;
+    height: 72rem;
+    flex-grow: 1;
+    align-self: flex-start;
+    cursor: pointer;
+}
+
+.options {
+    flex-basis: 40%;
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+    color: rgb(73, 69, 69);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-top: 10rem;
+    letter-spacing: 1.1;
+    animation: slide 1.5s ease-out .5s;
+    animation-fill-mode: backwards;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+    animation: slide 1.5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+button {
+    display: inline-block;
+    padding: 2rem 4rem;
+    background-color: steelblue;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    margin: 2.5rem 2rem;
+    cursor: pointer;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+    transition: all .2s ease;
+    animation: fadeIn 1.5s ease-out 1s;
+    animation-fill-mode: backwards;
+}
+
+button:hover {
+    background-color: rgb(16, 74, 121);
+    transform: translateY(-.5rem);
+}
+
+button:active {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-20rem);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(3rem);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+p {
+    font-size: 1.5rem;
+    font-style: italic;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.hide {
+    display: none;
+}
